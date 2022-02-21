@@ -78,8 +78,8 @@ Charges''',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   )),
               CustomGridCard(
-                  icon: Icons.money_sharp,
-                  containerColor: Color.fromARGB(255, 101, 52, 179),
+                  icon: Icons.stacked_line_chart_outlined,
+                  containerColor: Color.fromARGB(255, 179, 52, 162),
                   text: Text(
                     '''Order
 Form''',
@@ -89,7 +89,7 @@ Form''',
                 clipBehavior: Clip.none,
                 children: [
                   Positioned(
-                    left: -70,
+                    left: -73,
                     top: 10,
                     child: Align(
                       alignment: Alignment.topLeft,
@@ -98,7 +98,7 @@ Form''',
                             borderRadius: BorderRadius.circular(5),
                             color: Colors.greenAccent[700]),
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(7, 2, 7, 2),
+                          padding: const EdgeInsets.fromLTRB(9, 3, 9, 3),
                           child: Text(
                             "NEW",
                             style:
@@ -112,6 +112,25 @@ Form''',
               )
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.add_alert_outlined), label: 'Orders'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.production_quantity_limits),
+                label: 'Products'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.stacked_line_chart_outlined), label: 'Manage'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_box_outlined), label: 'Account')
+          ],
+          selectedItemColor: Colors.blue,
+          currentIndex: 3,
+          selectedFontSize: 12,
+          type: BottomNavigationBarType.fixed,
         ),
       ),
     );
